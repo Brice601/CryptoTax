@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTax FR - Déclaration Crypto Simplifiée 🇫🇷</title>
+    <meta name="description" content="Générez votre formulaire 2086 en 1 clic. Spécial Binance. 19€ au lieu de 79€.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .logo {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .problem {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .problem h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .solution {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .solution h3 {
+            color: #0c5460;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .features {
+            margin: 30px 0;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: start;
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .feature-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .feature-text {
+            flex-grow: 1;
+        }
+        
+        .feature-text strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+        }
+        
+        .pricing {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: rgba(255,255,255,0.7);
+            font-size: 24px;
+        }
+        
+        .new-price {
+            font-size: 56px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: #28a745;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: transform 0.2s, background 0.2s;
+        }
+        
+        .cta-button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        
+        .urgency {
+            text-align: center;
+            color: #dc3545;
+            font-weight: bold;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        
+        .guarantee {
+            text-align: center;
+            padding: 20px;
+            background: #d4edda;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 2px solid #28a745;
+        }
+        
+        .guarantee strong {
+            color: #155724;
+            font-size: 18px;
+        }
+        
+        .faq {
+            margin-top: 40px;
+        }
+        
+        .faq h3 {
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .faq-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .comparison {
+            margin: 30px 0;
+        }
+        
+        .comparison table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison th, .comparison td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison th {
+            background: #667eea;
+            color: white;
+        }
+        
+        .checkmark {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .crossmark {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            .card {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .new-price {
+                font-size: 42px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">💰🇫🇷</div>
+            <h1>CryptoTax FR</h1>
+            <p class="subtitle">Formulaire 2086 prêt en 1 clic • Spécial Binance</p>
+            
+            <div class="problem">
+                <h3>😤 Le problème que vous connaissez :</h3>
+                <p>Déclarer ses cryptos en France = <strong>cauchemar fiscal</strong></p>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li>Le CSV Binance n'est pas compatible avec impots.gouv</li>
+                    <li>Excel + calculatrice = 5h minimum de galère</li>
+                    <li>Les outils existants coûtent 79-299€/an</li>
+                    <li>Erreur = risque de redressement fiscal</li>
+                </ul>
+            </div>
+            
+            <div class="solution">
+                <h3>✨ La solution CryptoTax FR :</h3>
+                <p><strong>Import automatique → Calcul conforme → Export 2086 prêt</strong></p>
+                <p style="margin-top: 10px;">En 3 clics, votre déclaration est faite. Conforme à la législation française 2025.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🔗</div>
+                    <div class="feature-text">
+                        <strong>Connexion API Binance</strong>
+                        Lecture seule, 100% sécurisé. Ou import CSV manuel.
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🧮</div>
+                    <div class="feature-text">
+                        <strong>Calcul automatique PFU 30%</strong>
+                        Prix moyen pondéré conforme à la loi française.
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📄</div>
+                    <div class="feature-text">
+                        <strong>Export CSV formulaire 2086</strong>
+                        Format exact attendu par impots.gouv. Copier-coller direct.
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-text">
+                        <strong>Rapport détaillé inclus</strong>
+                        Toutes vos transactions analysées + récapitulatif fiscal.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comparison">
+                <h3 style="text-align: center; margin-bottom: 20px;">Pourquoi nous choisir ?</h3>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>CryptoTax FR</th>
+                        <th>Concurrents</th>
+                    </tr>
+                    <tr>
+                        <td>Prix</td>
+                        <td><span class="checkmark">19€ one-time</span></td>
+                        <td><span class="crossmark">79-299€/an</span></td>
+                    </tr>
+                    <tr>
+                        <td>Spécial France</td>
+                        <td><span class="checkmark">✓ Formulaire 2086</span></td>
+                        <td><span class="crossmark">✗ Générique</span></td>
+                    </tr>
+                    <tr>
+                        <td>Simplicité</td>
+                        <td><span class="checkmark">✓ 3 clics</span></td>
+                        <td><span class="crossmark">✗ Interface complexe</span></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="pricing">
+                <div class="old-price">79€</div>
+                <div class="new-price">19€</div>
+                <div class="badge">🚀 OFFRE EARLY BIRD -76%</div>
+                <p style="margin-top: 15px; font-size: 14px;">Accès à vie • Rapport complet inclus</p>
+            </div>
+            
+            <p class="urgency">⏰ Seulement 50 places à ce prix • Plus que 47 restantes</p>
+            
+            <a href="#order-form" class="cta-button" onclick="scrollToForm()">
+                ✅ Je réserve ma place à 19€
+            </a>
+            
+            <div class="guarantee">
+                <strong>🛡️ Garantie satisfait ou remboursé 30 jours</strong>
+                <p style="margin-top: 10px; color: #155724;">Si l'outil ne répond pas à vos attentes, remboursement intégral sans question.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Questions fréquentes</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">📅 Quand l'outil sera disponible ?</div>
+                    <div class="faq-answer">Livraison prévue mi-janvier 2026, juste à temps pour la déclaration d'impôts.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">🔒 Mes données sont-elles sécurisées ?</div>
+                    <div class="faq-answer">Oui. API Binance en lecture seule (pas de retrait possible). Toutes vos données sont chiffrées. Nous ne stockons pas vos clés API.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">💼 Ça marche pour tous les profils ?</div>
+                    <div class="faq-answer">Oui, que vous ayez fait 5 ou 5000 transactions. Le calcul est automatique.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">📞 Et si j'ai un problème ?</div>
+                    <div class="faq-answer">Support email sous 24h + tutoriel vidéo inclus. Garantie remboursement 30 jours.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">🔄 C'est vraiment 19€ à vie ?</div>
+                    <div class="faq-answer">Oui ! Prix early bird. Après les 50 premières ventes, le prix passera à 49€. Pas d'abonnement.</div>
+                </div>
+            </div>
+            
+            <div id="order-form" style="margin-top: 40px; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                <h3 style="text-align: center; margin-bottom: 20px;">🎯 Réserver ma place</h3>
+                
+                <form id="preorder-form" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" id="name" placeholder="Votre prénom" required style="padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px;">
+                    
+                    <input type="email" id="email" placeholder="Votre email" required style="padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px;">
+                    
+                    <textarea id="message" placeholder="Utilisez-vous Binance ? Autre exchange ? (optionnel)" rows="3" style="padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; font-family: inherit;"></textarea>
+                    
+                    <button type="submit" class="cta-button" style="margin: 0;">
+                        💳 Payer 19€ maintenant (Stripe)
+                    </button>
+                    
+                    <p style="text-align: center; font-size: 12px; color: #666;">
+                        🔒 Paiement sécurisé par Stripe<br>
+                        Vous recevrez un email de confirmation + accès dès janvier 2026
+                    </p>
+                </form>
+            </div>
+            
+            <p style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+                ⚠️ <strong>Attention :</strong> Cet outil est en cours de développement.<br>
+                En précommandant, vous soutenez le projet et bénéficiez du prix le plus bas.
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>CryptoTax FR • Contact : cryptotaxfr@gmail.com</p>
+            <p style="margin-top: 10px; font-size: 12px;">
+                <a href="mentions.html" style="color: white; text-decoration: none;">Mentions légales</a> • 
+                <a href="cgv.html" style="color: white; text-decoration: none;">CGV</a> • 
+                Politique de confidentialité
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function scrollToForm() {
+            document.getElementById('order-form').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        document.getElementById('preorder-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // ⚠️ IMPORTANT : Remplace cette URL par ton lien Stripe Payment Link
+            // Va dans Stripe Dashboard → Payment Links → Copie l'URL
+            const stripePaymentLink = 'https://buy.stripe.com/test_6oUcMX3Wi75UcVn2vFgMw00';
+            
+            // Stockage local pour tracking (optionnel)
+            localStorage.setItem('cryptotax_preorder', JSON.stringify({
+                name: name,
+                email: email,
+                message: message,
+                timestamp: new Date().toISOString()
+            }));
+            
+            // Redirection vers Stripe Payment Link
+            window.location.href = stripePaymentLink;
+        });
+        
+        // Compteur de places restantes (simulation pour urgence)
+        setInterval(() => {
+            const countElement = document.querySelector('.urgency');
+            if (countElement) {
+                const match = countElement.textContent.match(/(\d+) restantes/);
+                if (match) {
+                    let count = parseInt(match[1]);
+                    if (count > 40) {
+                        count = Math.max(40, count - Math.floor(Math.random() * 2));
+                        countElement.textContent = countElement.textContent.replace(/\d+ restantes/, `${count} restantes`);
+                    }
+                }
+            }
+        }, 30000); // Diminue toutes les 30 secondes
+    </script>
+</body>
+</html>
